@@ -41,7 +41,7 @@ python integrated_logic.py
 The core functionality is encapsulated in three classes: GoodResponse, HallucinatedResponse, and ResponseProcessor. These handle the generation of LLM responses under different conditions and their subsequent processing.
 
 To generate responses: Modify the prompts in integrated_logic.py and run the script.
-To process responses: The ResponseProcessor class includes methods for creating word clouds, finding common words, and calculating semantic similarities.
+To process responses: The ResponseProcessor class includes methods for logic gate pooling, creating word clouds, and calculating semantic similarities.
 
 ## Extending the Work
 To add new models or response processing techniques, extend the existing classes or add new scripts in the respective folders.
