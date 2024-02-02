@@ -29,11 +29,28 @@ pip install -r requirements.txt
 
 * API Keys and Model Directories: The scripts require API keys for Hugging Face and OpenAI, as well as the path to the Cerebras model directory. Ensure you have these keys and update the scripts with your own keys and paths.
 
-* Running the Scripts: The main experiments can be run using the integrated_logic.py script. Customize the prompts or model parameters as needed for your experiments.
+* Plotting: 
+First step would be uploading generated Logic_scores. csv file in the plotting folder. The following example scripts should work post that point, if the respective row numbers are provided:
 
 ```bash
+# Example
+row_ranges = {'T(0.2,0.2)': (189, 200), 'T(0.2,0.7)': (202, 214), 'T(0.2,1.3)': (216, 228), 'T(0.2,2.0)': (230, 241) }
+```
+
+Example1: Plotting Generic trends, Intrinsic hallucinations and Extrinsic Hallucinations is available with this code
+```bash
+# Generic trends
+python plotting_generic_trends.py
+```
+Example2: Plotting the evolution of hallucination with changing temperature is available in this code
+```bash
+# Temperature based evolution
+python plot_temp_average_score.py
+```
+Example3: Plotting average scores of the logic gates
+```bash
 # main code
-python integrated_logic.py
+python plotting_average_scores.py
 ```
 
 ## Generating and Processing Responses
