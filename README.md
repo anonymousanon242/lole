@@ -49,16 +49,27 @@ python plot_temp_average_score.py
 ```
 Example3: Plotting average scores of the logic gates
 ```bash
-# main code
+# Average score generating code
 python plotting_average_scores.py
 ```
 
 ## Generating and Processing Responses
 
-The core functionality is encapsulated in three classes: GoodResponse, HallucinatedResponse, and ResponseProcessor. These handle the generation of LLM responses under different conditions and their subsequent processing.
+The core functionality is encapsulated in three classes, GoodResponse, HallucinatedResponse, and ResponseProcessor. These handle the generation of LLM responses under different conditions and their subsequent processing.
 
-To generate responses: Modify the prompts in integrated_logic.py and run the script.
-To process responses: The ResponseProcessor class includes methods for logic gate pooling, creating word clouds, and calculating semantic similarities.
+To generate responses modify the prompts in integrated_logic.py and run the script. Modify the appropriate parameters in goodresponse.py and hallucinatingresponse.py
+
+Example: Mistral Script in Hallucinating Response
+```bash
+# Average score generating code
+def get_mistral_response(self, prompt):
+        mistral = HuggingFaceHub(repo_id="mistralai/Mistral-7B-v0.1", huggingfacehub_api_token=self.hf_token)
+        return mistral(prompt, temperature=2.0, top_p=0.5,max_tokens=500)
+```
+'temperature=2.0, top_p=0.5,max_tokens=500' can be varied accordingly to generate conditions for hallucinations or otherwise generate standard responses. A high temperature, top_p and max_tokens is known to make LLMs more creative, enhancing conditions for hallucination generations. Similar parameters can be tuned for the other models.
+
+## Process responses 
+ResponseProcessor class includes methods that logic gate pooling, creating word clouds, and calculating semantic similarities. Generation of of the 4 logic scores is via this script.
 
 ## Extending the Work
 To add new models or response processing techniques, extend the existing classes or add new scripts in the respective folders.
