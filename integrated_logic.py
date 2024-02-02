@@ -8,8 +8,10 @@ import os
 
 
 
-k = 0
-for k in range(3): 
+counter = 0
+assigned_pool_length = 10
+
+for counter in range(assigned_pool_length): 
     # Set up API keys and model directories
     HF_TOKEN = ""
     OPENAI_API_KEY = ''
