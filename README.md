@@ -32,7 +32,7 @@ pip install -r requirements.txt
 * Running the Scripts: The main experiments can be run using the integrated_logic.py script. Customize the prompts or model parameters as needed for your experiments.
 
 ```bash
-# install key dependencies
+# main code
 python integrated_logic.py
 ```
 
