@@ -1,3 +1,4 @@
+<div align="center">
 <img src="./assets/Lole_Logo.jpg" width=60%>
 <br>
 
@@ -32,13 +33,10 @@ pip install -r requirements.txt
 * Running the Scripts: The main experiments can be run using the integrated_logic.py script. Customize the prompts or model parameters as needed for your experiments.
 
 ```bash
-# main code
+# install key dependencies
 python integrated_logic.py
 ```
-```bash
-# plotting code
-python plotting_temp_average.py
-```
+
 ## Generating and Processing Responses
 
 The core functionality is encapsulated in three classes: GoodResponse, HallucinatedResponse, and ResponseProcessor. These handle the generation of LLM responses under different conditions and their subsequent processing.
